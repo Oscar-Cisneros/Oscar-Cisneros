@@ -1,0 +1,13 @@
+import re
+pal=input("Ingrese un texto")
+patron=r'\s+'
+palconvert=re.sub(patron,"",pal)
+pal2=pal[::-1]
+resultado=re.sub(patron,"",pal2)
+
+if palconvert != resultado:
+    print(f"la cadena  "+pal+"  no es maplindromo")
+    print("Su lectura inversa es "+pal2)
+    print("resultado :"+resultado)
+else:
+    print("es palindromo")
